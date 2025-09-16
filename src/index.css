@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Mohave:ital,wght@0,300..700;1,300..700&display=swap');
+@import "tailwindcss";
+
+/* for Dark mode toggle */
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+@theme {
+    --font-mohave: "Mohave", sans-serif;
+    --color-mainbg-dark: #010D1E;
+    --color-maintxt-dark: #A2D5C6;
+    --color-mainbtn-dark: #27F59C;
+    --color-icon-bg: #28EBB3;
+
+    --text-mobile-size: 1.2rem;
+    --text-dtop-size: 1.3rem;
+
+    --text-session-size: 1.5em;
+    --text-basehead-size: 1.1em;
+    --text-base-size: 1em;
+    --text-smol-size: .8em;
+    --text-token-size: .7em;
+}

@@ -1,0 +1,9 @@
+{
+    "UI/UX DESIGN":"Is able of designing clean, modern websites using designing tools such as Figma, Canva.",
+    "API INTEGRATION":"Is familiar to RESTFUL API integration. As well as an array of third-party APIs for the intended project.",
+    "REAL-TIME SOCKET":"Can build webapps concerning real-time functions including chat-apps, concurrent systems.",
+    "OAUTH":"Is able of building OAUTH 2.0, token based credential-delegation authorization systems.",
+    "BACKEND SYSTEM OPTIMIZATION":"Is adapt at designing and building scalable, efficient server logics.",
+    "NODE PACKAGE MANAGMENT":"Familiar with NPM and NPX cmds to execute, install node related APIs and dependencies.",
+    "DATABASE INTEGRATION":"Capable of integrating databases for secure and efficient data storage."
+}
