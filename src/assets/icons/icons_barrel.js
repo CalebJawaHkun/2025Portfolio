@@ -18,14 +18,14 @@ import tailwind from './tailwind_bicon.png'
 import vscode from './vscode_bicon.png'
 import npm from './npm_bicon.png'
 import rightArrow from './right_arrow.png'
+import cross from './cross_icon.png'
 
 import git_link from './git_icon.png'
 import fb_link from './fb_icon.png'
 import in_link from './in_icon.png'
 
 
-
-export { rightArrow, git_link, fb_link, in_link }
+export { rightArrow, cross, git_link, fb_link, in_link }
 
 export default {
     skills: [

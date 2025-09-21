@@ -2,11 +2,12 @@ import { SessionTxt, Smol, Base, BaseHead } from "./Subcomps";
 import Edus from '../assets/dat/Educations.json'
 import { useMemo } from "react";
 
-export default function Educations() {
+export default function Educations({anchor=""}) {
 
     const Es = useMemo(() => Object.entries(Edus), [])
     return (
         <section
+        id={anchor}
         className="md:flex h-80
         ">
             <SessionTxt txt="Educations"/>

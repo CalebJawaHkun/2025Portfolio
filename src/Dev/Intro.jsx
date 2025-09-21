@@ -1,8 +1,8 @@
 import { SessionTxt, Btn, Base } from "./Subcomps"
 
-export default function Intro() {
+export default function Intro({anchor}) {
     return (
-        <section>
+        <section id={anchor}>
             <div className="font-bold text-6xl lg:text-8xl
             h-dvh
             flex flex-col justify-center">

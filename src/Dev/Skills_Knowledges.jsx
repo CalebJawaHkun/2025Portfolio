@@ -28,7 +28,7 @@ function Circle({obj}) {
 }
 
 function Skills() {
-    return <section className="
+    return <div className="
             grid grid-cols-1 gap-4
             md:grid-cols-5 md:grid-rows-[auto_auto] md:gap-2
             ">
@@ -42,12 +42,12 @@ function Skills() {
                 rounded-l-none"/>
                 <Wrapper items={Icons.tools} title="Tools"
                 c="col-span-full"/>
-        </section>
+        </div>
 }
 
 function Knowledges() {
     let ks = useMemo(() => Object.entries(Ks), [])
-    return <section className="mt-4">
+    return <div className="mt-4">
         <SessionTxt txt="Knowledges"/>
         <div className="flex flex-wrap gap-4
         max-md:divide-y-2">
@@ -57,14 +57,14 @@ function Knowledges() {
                 <p>{short}</p>
             </div>)}
         </div>
-    </section>
+    </div>
 }
 
-export default function Skills_Knowledges() {
+export default function Skills_Knowledges({anchor=""}) {
     return (
-        <div>
+        <section id={anchor}>
             <Skills/>
             <Knowledges/>
-        </div>
+        </section>
     )
 }

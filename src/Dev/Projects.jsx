@@ -10,9 +10,9 @@ md:basis-60 ${c}`}>
     {children} 
 </div>
 
-export default function Projects() {
+export default function Projects({anchor=""}) {
     return (
-        <section>
+        <section id={anchor}>
             <SessionTxt txt="Projects"/>
             <div className="grid grid-cols-1 gap-4
             lg:grid-cols-2">
