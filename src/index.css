@@ -18,6 +18,9 @@
     --color-cursor: #426070;
     --color-contactb: #049499;
     --color-contactbg: #14425B;
+    --color-projbg: #02122A;
+
+    --color-projhover: #1C2C3F;
 
     --text-mobile-size: 1.2rem;
     --text-dtop-size: 1.3rem;
@@ -27,6 +30,8 @@
     --text-base-size: 1em;
     --text-smol-size: .8em;
     --text-token-size: .7em;
+    --text-projabout-size: .9em;
+    --text-projlink-size: .9em;
 
 }
 
@@ -53,19 +58,16 @@
     font-size 300ms ease-out;
 }
 
+@utility dropTransit {
+    transition-property: padding, height, opacity;
+    transition-duration: 300ms;
+    transition-timing-function: ease-out;
+}
+@utility circleTransit {
+    transition: opacity 300ms ease-out;
+}
+
 @theme {
-    --animate-clockwise: clockwise 600ms linear infinite;
-    --animate-anticlockwise: anticlockwise 600ms linear infinite; 
-
-    @keyframes clockwise {
-        from { transform: rotate(0deg) }
-        to { transform: rotate(360deg) }
-    }
-
-    @keyframes anticlockwise {
-        from { transform: rotate(360deg) }
-        to { transform: rotate(0deg) }
-    }
 
     --animate-fadeup: fadeup 200ms ease-out 1;
     @keyframes fadeup {

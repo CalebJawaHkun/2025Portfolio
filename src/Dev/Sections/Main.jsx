@@ -4,9 +4,10 @@ import Projects from "./Projects"
 import Outro from "./Outro"
 import Educations from "./Educations"
 import { useEffect, useMemo, useState, useReducer } from "react"
-import MenuBarV2 from "../Test/MenuBarV2"
-import Cursor from "../Test/Cursor"
-import Contact from "../Test/Contact"
+import MenuBarV2 from "../Components/MenuBar"
+import Cursor from "../Components/Cursor"
+import Proj from "../Components/Proj"
+import Contact from "../Components/Contact"
 
 export default function Main() {
 
@@ -23,8 +24,12 @@ export default function Main() {
     const [cursorInView, setIfCursorInView] = useState(false)
     const [isClickable, setIfClickable] = useState(false)
     const [contactIsVis, ifContactIsVis] = useState(false)
+    const [projIndex, setProjIndex] = useState(-1)
 
     useEffect(() => {
+
+        document.documentElement.style.scrollBehavior = 'smooth'
+
         const addE = (e, cb, to) => to?.addEventListener(e, cb)
         const delE = (e, cb, to) => to?.removeEventListener(e, cb)
 
@@ -60,18 +65,23 @@ export default function Main() {
         }
     }, [])
 
+    useEffect(() => {
+        document.body.classList.toggle('overflow-hidden', projIndex>-1)
+        return () => document.body.classList.remove("overflow-hidden");
+    }, [projIndex]);
+
     // useEffect(() => console.log(`X: ${cPos.x}. Y: ${cPos.y}`), [cPos])
 
     return (
-        <div className="
-        relative
+        <div className={`relative
         max-w-[1200px] mx-auto p-4 
         grid grid-cols-1 gap-[4in]
-        ">
+        `}>
+            <Proj projDat={{projIndex, setProjIndex}}/>
             <Contact contactIsVis={contactIsVis} ifContactIsVis={ifContactIsVis}/>
             <Cursor pos={cPos} isPointer={isClickable} isWithin={cursorInView}/>
             <MenuBarV2 sections={sections} ifContactIsVis={ifContactIsVis}/>
-            {sections.map(([anchor, Comp]) => <Comp anchor={anchor}/>)}
+            {sections.map(([anchor, Comp]) => <Comp anchor={anchor} setProjIndex={setProjIndex}/>)}
             
         </div>
     )

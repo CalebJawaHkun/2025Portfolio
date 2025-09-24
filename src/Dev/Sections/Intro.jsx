@@ -1,4 +1,4 @@
-import { SessionTxt, Btn, Base } from "./Subcomps"
+import { SessionTxt, Btn, Base } from "../Components/Subcomps"
 
 export default function Intro({anchor}) {
     return (

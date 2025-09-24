@@ -1,29 +1,66 @@
-import { SessionTxt, BaseHead } from "./Subcomps";
+import { SessionTxt, BaseHead } from "../Components/Subcomps"
 import Icons from '../assets/icons/icons_barrel'
 import Ks from '../assets/dat/Knowledges.json'
-import { useMemo } from "react";
+import { useEffect, useMemo, useState, useReducer } from "react";
 
 
 function Wrapper({items, title, c=""}) {
+
+    const [isMd, setIsMd] = useState(false)
+    const [labelsShown, setIflabelsAreShown] = useReducer(pre => !pre, false)
+
+    useEffect(() => {
+        const checkIfMd = () => setIsMd(window.innerWidth <= 768)
+        checkIfMd()
+
+        window.addEventListener('resize', checkIfMd)
+
+        return () => window.removeEventListener('resize', checkIfMd)
+    }, [])
+
+    useEffect(() => {
+        let interval;
+        if(isMd) {
+            interval = setInterval(setIflabelsAreShown, 15 * 1000)
+        } else {
+            clearInterval(interval)
+        }
+
+        return () => clearInterval(interval)
+    }, [isMd])
+
     return <div className={`
         ${c}`}>
         <SessionTxt txt={title}/>
         <div className="mt-2 p-2 bg-icon-bg rounded-xl
         flex flex-wrap flex-row gap-2
         lg:justify-between max-sm:justify-between"> 
-            {items.map((item, i) => <Circle obj={item} key={''+i}/>)}
+            {items.map((item, i) => 
+            <Circle obj={item} key={''+i} md={{isMd, labelsShown}}/>)}
         </div>
     </div>
 }
 
-function Circle({obj}) {
+function Circle({obj, md}) {
     const [src, name] = obj
+    const [hovered, setHovered] = useState(false)
+    const { isMd, labelsShown } = md
+
+    useEffect(() => {
+        if(isMd) setHovered(labelsShown)
+    }, [labelsShown])
+
+    const pos = 'absolute left-1/2 top-1/2 -translate-1/2'
+    const alternator = con => con ? 'opacity-0':'opacity-100'
     return <div 
+    onMouseEnter={() => setHovered(true)}
+    onMouseLeave={() => setHovered(false)}
     className="bg-black rounded-full aspect-square size-25
-    flex justify-center items-center"
+    relative"
     key={name}>
-        <img className="w-5/7 filter-[brightness(0)_invert(1)]"
+        <img className={`w-5/7 filter-[brightness(0)_invert(1)] ${pos} ${alternator(hovered)} circleTransit`}
         src={src} alt={name} title={name}/>
+        <BaseHead txt={name} c={`${pos} ${alternator(!hovered)} circleTransit`}/>
     </div>
 }
 

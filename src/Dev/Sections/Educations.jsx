@@ -1,4 +1,4 @@
-import { SessionTxt, Smol, Base, BaseHead } from "./Subcomps";
+import { SessionTxt, Smol, Base, BaseHead } from "../Components/Subcomps";
 import Edus from '../assets/dat/Educations.json'
 import { useMemo } from "react";
 

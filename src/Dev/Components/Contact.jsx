@@ -1,7 +1,5 @@
-import { useMemo, useReducer } from "react"
-import { SessionTxt, Smol } from "../Dev/Subcomps"
-import { Close } from "../Dev/Subcomps"
-
+import { useMemo } from "react"
+import { SessionTxt, Smol, Close } from "../Components/Subcomps"
 
 export default function Contact({contactIsVis, ifContactIsVis}) {
 
@@ -29,7 +27,7 @@ export default function Contact({contactIsVis, ifContactIsVis}) {
             <Smol txt="If you think I can be of use, or if just a general ‘What’s Up?’, I am all Ears!"/>
             <div className="mt-2 space-y-2 flex flex-col items-start text-mainbtn-dark">
                 {links.map(link =>
-                    <div key={link} className="text-smol-size border-2 border-contactb py-1 px-2 rounded-xl"> 
+                    <div key={link} className="text-smol-size border-2 border-contactb py-1 px-2 rounded-xl hover:underline"> 
                         <a> {link} </a>
                     </div>
                 )}
