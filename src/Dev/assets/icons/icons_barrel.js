@@ -19,6 +19,8 @@ import vscode from './vscode_bicon.png'
 import npm from './npm_bicon.png'
 import rightArrow from './right_arrow.png'
 import cross from './cross_icon.png'
+import tarrow from './tr_arrow_bicon.png'
+import left from './left.png'
 
 import canvawhite from './canva_bicon_w.png'
 import githubwhite from './github_bicon_w.png'
@@ -30,6 +32,7 @@ import in_link from './in_icon.png'
 
 export { rightArrow, cross, git_link, fb_link, in_link }
 export { canvawhite, githubwhite }
+export { tarrow, left }
 
 export default {
     skills: [
@@ -44,6 +47,8 @@ export default {
         [figma, 'Figma'], [github, 'Github'], [chatgpt, 'ChatGPT'], [npm, 'NPM'], [git, 'Git']
     ], 
     links: [
-        [git_link, '/', 'GitLink'], [fb_link, '/', 'FacebookLink'], [in_link, '/', 'LinkedinLink']
+        [git_link, 'https://github.com/CalebJawaHkun', 'GitLink'], 
+        [fb_link, 'https://www.facebook.com/john.weak.313371', 'FacebookLink'], 
+        [in_link, 'https://www.linkedin.com/in/caleb-jawa-hkun-b3788b232/', 'LinkedinLink']
     ]
 }

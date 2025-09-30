@@ -1,10 +1,11 @@
-import { BaseHead, P, Tech, Close, ProjLink } from "./Subcomps"
-import Ps from '../assets/dat/Projects.json'
-import { githubwhite, canvawhite, left } from '../assets/icons/icons_barrel'
-import { useEffect, useState } from "react"
-
+import { BaseHead, P, Tech, Close } from "../Dev/Components/Subcomps";
+import Ps from '../Dev/assets/dat/Projects.json'
+import { githubwhite, canvawhite, left } from "../Dev/assets/icons/icons_barrel";
+import { useEffect, useReducer, useState } from "react";
 
 const ProjAbout = ({txt}) => <P txt={txt} c="text-projabout-size mt-2"/>
+const ProjLink = ({to}) =>
+<a href={to} target="_blank" className="font-semibold text-projlink-size text-mainbtn-dark inline break-all"> {to} </a>
 const Icon = ({src}) => <img src={src} className="size-6 inline"/>
 const Next = ({cb=null, isLeft=true}) => <div
     onClick={cb}
@@ -24,7 +25,7 @@ export default function Proj({projDat}) {
     const [current, next] = useState(0)
     const left = () => next(pre => (pre-1+size)%size)
     const right = () => next(pre => (pre+1)%size)
-    // useEffect(() => console.log(current), [current])
+    useEffect(() => console.log(current), [current])
     useEffect(() => next(0), [projIndex])
 
     return (
@@ -56,7 +57,7 @@ export default function Proj({projDat}) {
                         </div>
                         <div className="">
                             {links.map((link, i) => 
-                            <div key={i+'a'} className="mt-4 md:mt-2">
+                            <div className="mt-4 md:mt-0">
                                     <div> 
                                         <Icon src={i ? canvawhite:githubwhite}/> 
                                         <h3 className="inline"> {i ? 'Canva Design':'Repository'} </h3>

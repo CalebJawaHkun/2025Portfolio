@@ -8,6 +8,8 @@ import MenuBarV2 from "../Components/MenuBar"
 import Cursor from "../Components/Cursor"
 import Proj from "../Components/Proj"
 import Contact from "../Components/Contact"
+// import Contact from "../../Test/Contact"
+// import Proj from "../../Test/Proj"
 
 export default function Main() {
 
@@ -76,6 +78,7 @@ export default function Main() {
         <div className={`relative
         max-w-[1200px] mx-auto p-4 
         grid grid-cols-1 gap-[4in]
+        
         `}>
             <Proj projDat={{projIndex, setProjIndex}}/>
             <Contact contactIsVis={contactIsVis} ifContactIsVis={ifContactIsVis}/>

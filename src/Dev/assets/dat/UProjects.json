@@ -1,0 +1,11 @@
+{
+    "Online Tic-Tac-Toe": [
+        "The project is about online 1vs1 Tic-Tact-Toe mini game and is themed on Real-Time functionality. The game is designed so that Any two players can start to partake in a gameplay by going either hosting or joining a game. The mini game is desgned to be fast phased and will be developed using Express and React and mainly socket.io for REAL-TIME.",
+        ["Express", "React", "Socket.Io"],
+        "https://www.canva.com/design/DAGs1J4jKMo/rkesaPefDwnifWqsMbTmkA/edit"
+    ],
+    "KYN Webapp": [
+        "The project is focused on OAuth2.0 mainly with Google and LinkedIn account delegation. The project is also built on React and Express with libraries some of which will include morgan, passport, bcrypt and uuid. The webapp will include session management and database management both powered by Redis.",
+        ["Express", "React", "Redis"]
+    ]
+}

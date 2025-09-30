@@ -90,7 +90,7 @@ function Knowledges() {
         max-md:divide-y-2">
             {ks.map(([title, short], i) => 
             <div key={title} className="flex-1 basis-100">
-                <BaseHead txt={`${i<10&&'0'}${i+1} ${title}`}/>
+                <BaseHead txt={`${i<9 ? '0':''}${i+1} ${title}`}/>
                 <p>{short}</p>
             </div>)}
         </div>

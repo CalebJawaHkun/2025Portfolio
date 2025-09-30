@@ -11,10 +11,16 @@ const BaseHead = ({txt, c=''}) =>
 const Base = ({txt, c=''}) => <P txt={txt} c={`text-base-size ${c}`}/>
 const Smol = ({txt, c=''}) => <P txt={txt} c={`text-smol-size ${c}`}/>
 
-const Btn = ({cb=null, txt, c=''}) => 
-<button className={
-    `capitalize text-mainbtn-dark font-bold cursor-pointer my-4 ${c}
-    hover:underline`
+const Btn = ({cb=null, txt, c='', disabled=false, isSubmit=false}) => 
+<button 
+key={txt}
+disabled={disabled}
+type={isSubmit ? 'submit':''}
+className={
+    `
+    disabled:text-maintxt-dark disabled:hover:no-underline
+    capitalize text-mainbtn-dark font-bold cursor-pointer
+    hover:underline ${c}`
 } onClick={cb}> {txt} </button>
 
 const Close = ({cb=null, x=4, y=4}) => <div
@@ -28,8 +34,15 @@ const Close = ({cb=null, x=4, y=4}) => <div
     hover:scale-120"
 > <img src={cross} alt="Close Btn" title="Close Btn"/> </div>
 
-const Tech = ({txt}) => <span className="border-2 rounded-md mr-1 px-1 text-token-size"> {txt} </span>
+const Tech = ({txt}) => <span key={txt} className="border-2 rounded-md mr-1 px-1 text-token-size"> {txt} </span>
+
+const redirect = url => window.open(url, "_blank")
+
+const ProjLink = ({to}) =>
+<a href={to} target="_blank" className="font-semibold text-projlink-size text-mainbtn-dark inline break-all"> {to} </a>
 
 export {
     SessionTxt, Base, Btn, BaseHead, Smol, Close, Tech, P
 }
+
+export { redirect, ProjLink }

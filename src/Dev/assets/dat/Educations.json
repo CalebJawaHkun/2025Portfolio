@@ -1,14 +1,17 @@
 {
     "2022-2023": [
         "BTEC International Level 3 in Information Technology",
-        "Lithan EduClaas"
+        "Lithan EduClaas",
+        "https://qualifications.pearson.com/en/qualifications/btec-international-level-3.html"
     ],
     "2023-2025": [
         "Pearson BTEC HND in Computing",
-        "Lithan EduClaas"
+        "Lithan EduClaas",
+        "https://qualifications.pearson.com/en/qualifications/btec-higher-nationals.html"
     ],
     "2025-Ongoing": [
-        "BTEC International Level 3 in Information Technology",
-        "Roehampton Uni"
+        "Bachlor Of Science In Computer Science (B.Sc)",
+        "Roehampton Uni",
+        "https://www.roehampton.ac.uk/study/undergraduate-courses/computer-science/"
     ]
 }

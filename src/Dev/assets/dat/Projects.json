@@ -1,38 +1,36 @@
 [
     [
-        "Project Name One", 
-        "Capable of integrating databases for secure and efficient data storage.",
-        ["React", "Express", "Node", "Tailwind"],
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-        ["https://github.com/somerepo/someproj",
-        "https://www.somewebsite.com/some/location"],
-        ["01", 1]
+        "Battleship Mini Game", 
+        "A quick minigame built on playing against an automated computer on a 1v1 battle.",
+        ["React", "ReactDND"],
+        "The project is about a battleship mini game. The game play is simple as it involves only the player and programmed Computer going one-on-one to guess the other's hidden ship on the map. Gameplay involves picking and placing the chosen ships on a board and going to guessing battle. And whoever guesses all the ships first wins. The project is built mainly using vanilla React with CRA and with the help of ReactDND(Drag-and-drop) library. As the library specifies, the project was focused on constructing a DND feature during Ship Placement phase on the board. As one of the first project built using React, it taught me various fundamentals of react project construction.",
+        ["https://github.com/CalebJawaHkun/BattleShipMiniGame",
+        "https://www.canva.com/design/DAGVPZJKV7g/rZLChQseSoc8zpjvAJNd6Q/edit"],
+        ["01", 4]
     ],
     [
-        "Project Name Two", 
-        "Capable of integrating databases for secure and efficient data storage.",
-        ["React", "Express", "Node", "Tailwind"],
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-        ["https://github.com/somerepo/someproj",
-        "https://www.somewebsite.com/some/location"],
-        ["02", 1]
+        "Nature Retreat", 
+        "A browsing visual game built with calming mini activites built-in.",
+        ["React", "React-Howler", "Framer-Motion", "Howl", "Sprite Animator"],
+        "Nature Retreat project is the next big React project built after Battleship game. In the game, player selects one of the 5 animated characters provides and wonders around a set jungle area to explore the hidden minigames to partake in them. It is a relaxing web-based compilation of minigames built with the theme of wondering in nature with interactive UIs and relaxing setting. The project was built mainly on React CRA using React-Howler, Framer-motion, React Howl and Sprite-animator for character animation. The project included extra interactive features such as SFX, character control and extra animated VFXs with Framer-motion. The project used a custom router built Switching and React-context as the main architecture rather than using React Router. Overall, building the project from absolute ground up pushed me to implementing and appreciating a proper scalable application architecture design.",
+        ["https://github.com/CalebJawaHkun/nature_retreat",
+        "https://www.canva.com/design/DAGVPZJKV7g/rZLChQseSoc8zpjvAJNd6Q/edit"],
+        ["02", 7]
     ],
     [
-        "Project Name Three", 
-        "Capable of integrating databases for secure and efficient data storage.",
-        ["React", "Express", "Node", "Tailwind"],
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-        ["https://github.com/somerepo/someproj",
-        "https://www.somewebsite.com/some/location"],
-        ["03", 1]
+        "Merry Meal", 
+        "A web-app built as full-dashboard system to cater Healthy foods to elderly people.",
+        ["Tomcat", "MYSQL", "MYSQL-Connector"],
+        "Merry Meal was one of the old project built during my previous academic years. The project is a full-dashboard SSR webapp system built for multiple roles involved to contribute to food delivery service. The main theme of the project is about food delivery service for elderly people that are on the vicinity of food stores. The project is built on an old Apache Tomcat, servlet and JSP technology in addition with MYSQL database integration. The Project used mysql-connector for SQL connection and commons-validator for input data validation. The project laid the most fundamental knowledges on HTTP protocols and the ways of request and response in me.",
+        ["https://github.com/CalebJawaHkun/MerryMeal"],
+        ["03", 9]
     ],
     [
-        "Project Name Four", 
-        "Capable of integrating databases for secure and efficient data storage.",
-        ["React", "Express", "Node", "Tailwind"],
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-        ["https://github.com/somerepo/someproj",
-        "https://www.somewebsite.com/some/location"],
-        ["04", 1]
+        "Dobu Martial Art", 
+        "A visual only webapp built using vanilla HTML, CSS and JS.",
+        ["HTML", "CSS", "JS"],
+        "The project was also one of the projects of previous academic years. As it was my earliest projects, The main focus was on the fundamentals of web technology trinity HTML-CSS-JS. The project is a web-app design simulation for a martial art school named 'Dobu'. The site represents the School's training programs, training areas and other teaching materials. Although the project was built on vanilla technologies, its built to be fully responsive on all mobile viewports and included a input validation. The project taught me fundamentals on how responsive designs were constructed, html semantics and JS web dynamic programming with document and window.",
+        ["https://github.com/CalebJawaHkun/DobuWebsite"],
+        ["04", 6]
     ]
 ]

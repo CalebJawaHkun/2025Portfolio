@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react"
-import { SessionTxt, Smol, Close, Btn } from "../Components/Subcomps"
+import { SessionTxt, Smol, Close, Btn } from "../Dev/Components/Subcomps"
+import emailjs from "emailjs-com"
 
 const Input = ({ph, c, name='', type='', disabled=false}) => 
 <input 
@@ -94,7 +95,7 @@ export default function Contact({contactIsVis, ifContactIsVis}) {
         text-[1.5em] md:text-base-size
         fixed right-0 bottom-0 z-1
         md:right-4 md:bottom-4
-        md:w-100 md:h-auto
+        md:w-90 md:h-auto
         w-dvw h-dvh
         ${contactIsVis ? 'animate-fadeup':'animate-fadedown'}
         contactTransit

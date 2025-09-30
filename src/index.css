@@ -19,8 +19,10 @@
     --color-contactb: #049499;
     --color-contactbg: #14425B;
     --color-projbg: #02122A;
-
+    --color-input-txt: #B4E4D6;
+    
     --color-projhover: #1C2C3F;
+    --color-inputborder: #049499;
 
     --text-mobile-size: 1.2rem;
     --text-dtop-size: 1.3rem;
@@ -30,9 +32,29 @@
     --text-base-size: 1em;
     --text-smol-size: .8em;
     --text-token-size: .7em;
-    --text-projabout-size: .9em;
-    --text-projlink-size: .9em;
+    --text-projabout-size: .8em;
+    --text-projlink-size: .8em;
 
+}
+
+@theme {
+
+    --animate-fadeup: fadeup 200ms ease-out 1;
+    @keyframes fadeup {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0px); }
+    }
+    
+    --animate-fadedown: fadedown 200ms ease-in 1;
+    @keyframes fadedown {
+        from { opacity: 1; transform: translateY(0px); }
+        to { opacity: 0; transform: translateY(20px); }
+    }
+    --animate-spining: spin 1s linear infinite;
+    @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
 }
 
 .cursorDiv {
@@ -67,17 +89,3 @@
     transition: opacity 300ms ease-out;
 }
 
-@theme {
-
-    --animate-fadeup: fadeup 200ms ease-out 1;
-    @keyframes fadeup {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0px); }
-    }
-    
-    --animate-fadedown: fadedown 200ms ease-in 1;
-    @keyframes fadedown {
-        from { opacity: 1; transform: translateY(0px); }
-        to { opacity: 0; transform: translateY(20px); }
-    }
-}
