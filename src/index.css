@@ -10,6 +10,20 @@
 
 @theme {
     --font-mohave: "Mohave", sans-serif;
+    --text-mobile-size: 1.2rem;
+    --text-dtop-size: 1.3rem;
+
+    --text-session-size: 1.5em;
+    --text-basehead-size: 1.1em;
+    --text-base-size: 1em;
+    --text-smol-size: .8em;
+    --text-token-size: .7em;
+    --text-projabout-size: .8em;
+    --text-projlink-size: .8em;
+
+}
+
+@theme {
     --color-mainbg-dark: #010D1E;
     --color-maintxt-dark: #A2D5C6;
     --color-mainbtn-dark: #27F59C;
@@ -23,18 +37,17 @@
     
     --color-projhover: #1C2C3F;
     --color-inputborder: #049499;
+}
 
-    --text-mobile-size: 1.2rem;
-    --text-dtop-size: 1.3rem;
-
-    --text-session-size: 1.5em;
-    --text-basehead-size: 1.1em;
-    --text-base-size: 1em;
-    --text-smol-size: .8em;
-    --text-token-size: .7em;
-    --text-projabout-size: .8em;
-    --text-projlink-size: .8em;
-
+@theme {
+    --color-mainbg-white: #C4DDFF;
+    --color-maintxt-white: #000;
+    --color-mainbtn-white: #471396;
+    --color-navhighlight-white: #77D0FF;
+    --color-icon-bg-white: #87B4E4;
+    --color-projhover-white: #DCEEFF;
+    --color-contactbg-white: #94D6FF;
+    --color-inputborder-white: #000;
 }
 
 @theme {
@@ -60,14 +73,6 @@
 .cursorDiv {
     @apply rounded-full -translate-x-1/2 -translate-y-1/2;
 }
-
-.messageCardGradient {
-    @apply bg-gradient-to-b from-[#14425B] via-[#1E6F8C] to-[#3EC2D2];
-}
-.messageCardNormal {
-    @apply md:bg-contactbg md:from-transparent md:via-transparent md:to-transparent
-}
-
 
 @utility cursorTransition {
     transition-property: width, height;

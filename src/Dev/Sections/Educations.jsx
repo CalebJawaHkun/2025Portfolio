@@ -14,10 +14,10 @@ function EduName({txt, to}) {
     className="cursor-pointer"
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}> 
-        <Base txt={txt} c="inline hover:text-mainbtn-dark"/> 
-        <img 
-        className={`inline relative size-2 ${hovered ? 'left-1 size-2 bottom-1':'left-0 size-3 bottom-0'} transition-all`}
-        src={tarrow} alt="Top Right" title="Top Right"/>
+        <Base txt={txt} c="inline hover:text-mainbtn-dark dark:hover:text-mainbtn-white"/> 
+        <i className={`fa-solid fa-up-right-from-square
+        ${hovered ? 'left-1 text-[.8em] bottom-1':'left-0 text-[1em] bottom-0'} 
+        relative transition-all`}></i>
     </div>
 }
 

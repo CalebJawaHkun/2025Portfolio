@@ -26,14 +26,16 @@ function ProjCard({p, k, cb}) {
         onClick={() => cb(k)}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-            className="hover:bg-projhover p-2 rounded-xl
+            className="hover:bg-projhover 
+            hover:dark:bg-projhover-white
+            p-2 rounded-xl
             transition-all cursor-pointer">
             <div className="flex items-center"> 
                 <BaseHead txt={pname}/> 
-                <img src={rightArrow} 
-                className={`size-6 inline ml-2 
-                ${hovered ? 'translate-x-2':'transalte-x-0'}
-                transition-transform`}/>
+                <i className={`fa-solid fa-circle-arrow-right text-xl 
+                pl-2
+                transition-transform
+                    ${hovered ? 'translate-x-2':'transalte-x-0'}`}></i>
             </div>
             <div className="flex flex-wrap gap-2 mt-2">
                 <div className="basis-full md:basis-60"> 

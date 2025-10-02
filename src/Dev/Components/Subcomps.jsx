@@ -20,26 +20,25 @@ className={
     `
     disabled:text-maintxt-dark disabled:hover:no-underline
     capitalize text-mainbtn-dark font-bold cursor-pointer
+    dark:text-mainbtn-white
     hover:underline ${c}`
 } onClick={cb}> {txt} </button>
 
-const Close = ({cb=null, x=4, y=4}) => <div
+const Close = ({cb=null, x=6, y=4}) => <div
     onClick={cb}
     style={{
         position: 'absolute',
         top: `${y}px`,
         right: `${x}px`,
     }}
-    className="size-10 md:size-8
-    hover:scale-120"
-> <img src={cross} alt="Close Btn" title="Close Btn"/> </div>
+> <i className="fa-solid fa-xmark hover:scale-120 text-4xl md:text-3xl"></i> </div>
 
-const Tech = ({txt}) => <span key={txt} className="border-2 rounded-md mr-1 px-1 text-token-size"> {txt} </span>
+const Tech = ({txt}) => <div key={txt} className="border-2 rounded-md mr-1 px-1 text-token-size inline-block"> {txt}  </div>
 
 const redirect = url => window.open(url, "_blank")
 
 const ProjLink = ({to}) =>
-<a href={to} target="_blank" className="font-semibold text-projlink-size text-mainbtn-dark inline break-all"> {to} </a>
+<a href={to} target="_blank" className="font-semibold text-projlink-size text-mainbtn-dark dark:text-mainbtn-white inline break-all"> {to} </a>
 
 export {
     SessionTxt, Base, Btn, BaseHead, Smol, Close, Tech, P

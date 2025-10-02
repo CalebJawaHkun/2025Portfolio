@@ -8,8 +8,7 @@ import MenuBarV2 from "../Components/MenuBar"
 import Cursor from "../Components/Cursor"
 import Proj from "../Components/Proj"
 import Contact from "../Components/Contact"
-// import Contact from "../../Test/Contact"
-// import Proj from "../../Test/Proj"
+import DarkModeToggle from "../Components/DarkModeToggle"
 
 export default function Main() {
 
@@ -80,6 +79,7 @@ export default function Main() {
         grid grid-cols-1 gap-[4in]
         
         `}>
+            <DarkModeToggle/>
             <Proj projDat={{projIndex, setProjIndex}}/>
             <Contact contactIsVis={contactIsVis} ifContactIsVis={ifContactIsVis}/>
             <Cursor pos={cPos} isPointer={isClickable} isWithin={cursorInView}/>

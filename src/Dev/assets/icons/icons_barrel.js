@@ -45,10 +45,5 @@ export default {
     tools: [
         [vscode, 'VsCode'], [postman, 'Postman'], [chrome, 'Chrome'], [canva, 'Canva'], 
         [figma, 'Figma'], [github, 'Github'], [chatgpt, 'ChatGPT'], [npm, 'NPM'], [git, 'Git']
-    ], 
-    links: [
-        [git_link, 'https://github.com/CalebJawaHkun', 'GitLink'], 
-        [fb_link, 'https://www.facebook.com/john.weak.313371', 'FacebookLink'], 
-        [in_link, 'https://www.linkedin.com/in/caleb-jawa-hkun-b3788b232/', 'LinkedinLink']
     ]
 }

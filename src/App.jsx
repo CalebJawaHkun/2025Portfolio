@@ -1,12 +1,8 @@
-import { useState } from 'react'
+import Main from './Dev/Sections/Main'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <button class="p-3 bg-blue-300"> Okay </button>
-    </>
+    <Main/>
   )
 }
 

@@ -32,7 +32,8 @@ function Wrapper({items, title, c=""}) {
     return <div className={`
         ${c}`}>
         <SessionTxt txt={title}/>
-        <div className="mt-2 p-2 bg-icon-bg rounded-xl
+        <div className="mt-2 p-2 bg-icon-bg dark:bg-icon-bg-white
+        rounded-xl
         flex flex-wrap flex-row gap-2
         lg:justify-between max-sm:justify-between"> 
             {items.map((item, i) => 
@@ -60,7 +61,7 @@ function Circle({obj, md}) {
     key={name}>
         <img className={`w-5/7 filter-[brightness(0)_invert(1)] ${pos} ${alternator(hovered)} circleTransit`}
         src={src} alt={name} title={name}/>
-        <BaseHead txt={name} c={`${pos} ${alternator(!hovered)} circleTransit`}/>
+        <BaseHead txt={name} c={`${pos} ${alternator(!hovered)} circleTransit dark:text-white`}/>
     </div>
 }
 

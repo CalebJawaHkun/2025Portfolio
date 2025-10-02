@@ -1,17 +1,32 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 
 export default function Cursor({pos, size=24, isPointer=false, isWithin}) {
 
+    const [isInView, setIfInView] = useState(false)
+    const trackViewport = v => {
+        let vps = {'sm':640, 'md':768, 'lg':1024, 'xl': 1280, '2xl':1536}
+        let minwidth = vps[v]      
+
+        setIfInView(window.innerWidth >= minwidth)
+    }
+    useEffect(() => {
+        window.addEventListener('resize', () => trackViewport('2xl'))
+        return () => window.removeEventListener('resize', () => trackViewport('xl'))
+    }, [])
+
+    // useEffect(() => console.log('Is In View: ', isInView), [isInView])
+
     const {x, y} = pos
-    // useEffect(() => console.log(`X: ${x}, Y: ${y}`), [])
 
     const tSize = isPointer ? 16:(16 * size / 4)
 
     return isWithin && pos && <div
-    className="cursorDiv fixed z-2
+    className={`
+    ${!isInView && 'invisible'}
+    cursorDiv fixed z-2
     border-2 rounded-full border-cursor
     pointer-events-none
-    cursorTransition"
+    cursorTransition`}
     style={{
         left: x, top: y,
         width: `${tSize}px`, height: `${tSize}px`,

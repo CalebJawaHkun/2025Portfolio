@@ -63,11 +63,14 @@ export default function MenuBarV2({sections, ifContactIsVis}) {
 
     return (
         <nav className="
-        py-2 px-4 rounded-[5rem]
+        py-2 px-4 sm:rounded-[5rem]
         text-[.9rem] sm:text-[1em]
-        fixed top-5 left-1/2 z-0
-        tranform -translate-x-1/2
-        flex gap-8 backdrop-blur-xl
+        fixed 
+        top-0 left-0 w-full sm:w-auto
+        sm:top-5 sm:left-1/2 z-0
+        sm:-translate-x-1/2
+        flex gap-6 sm:gap-8 justify-center
+        backdrop-blur-xl
         " ref={menuRef}>
             {secs.map(([anchor, secname], i) => 
                 <Link to={anchor} cb={
@@ -81,8 +84,8 @@ export default function MenuBarV2({sections, ifContactIsVis}) {
             )}
             <div ref={highlightRef}
             className="absolute top-2 
-            h-full bg-navhighlight rounded-2xl 
-            transition-all duration-300"></div>
+            h-full bg-navhighlight dark:bg-navhighlight-white rounded-2xl 
+            transition-all duration-300"/>
         </nav>
     )
 }

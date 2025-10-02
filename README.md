@@ -1,6 +1,12 @@
 # My Portfolio 2025.
 Powered by Tailwind
 
+# Changes from Last Commit
+1. Menubar UI component is now fixed for mobile devcies.
+2. Fixed the Project framework/libarray Badges word-breaking issue on smaller viewport.
+3. Installed Dark-mode toggling.
+4. Replaced the png icons with more verstile font-awesome SVG based icons.
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

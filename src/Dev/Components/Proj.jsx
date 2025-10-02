@@ -8,10 +8,10 @@ const ProjAbout = ({txt}) => <P txt={txt} c="text-projabout-size mt-2"/>
 const Icon = ({src}) => <img src={src} className="size-6 inline"/>
 const Next = ({cb=null, isLeft=true}) => <div
     onClick={cb}
-    className={`absolute top-1/2 -translate-y-1/2 w-10 ${isLeft ? 'left-2':'right-2'} hover:w-11 cursor-pointer`}
-> <img src={left}
-    className={`${!isLeft && 'rotate-180'} w-full`}
-/> </div>
+    className={`absolute top-1/2 -translate-y-1/2 w-10 ${isLeft ? 'left-2':'right-2'} cursor-pointer`}
+> <i className={`fa-solid fa-angle-${isLeft ? 'left':'right'} 
+hover:scale-90 text-mainbtn-dark dark:text-white
+text-3xl`}></i> </div>
 
 export default function Proj({projDat}) {
     
@@ -30,6 +30,7 @@ export default function Proj({projDat}) {
     return (
         <div className={`
         w-dvw bg-mainbg-dark
+        dark:bg-mainbg-white
         overflow-hidden
         fixed top-0 left-0 z-1 dropTransit
         ${projIndex>-1 ? 'h-dvh':'h-0'}`}>

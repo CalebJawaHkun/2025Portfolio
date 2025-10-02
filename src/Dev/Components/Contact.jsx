@@ -81,8 +81,8 @@ export default function Contact({contactIsVis, ifContactIsVis}) {
     }
 
     const generalInput = 
-    "border-2 w-full border-inputborder px-2 py-1 rounded-lg "+
-    "focus:border-mainbtn-dark focus:outline-none"
+    "border-2 w-full border-inputborder dark:border-inputborder-white px-2 py-1 rounded-lg "+
+    "focus:border-mainbtn-dark dark:focus:border-mainbtn-white dark:text-black focus:outline-none"
 
     const setDisplay = (s, E) => E.target.style.visibility = s
     return (
@@ -90,15 +90,16 @@ export default function Contact({contactIsVis, ifContactIsVis}) {
         onAnimationStart={E => setDisplay('visible', E)}
         onAnimationEnd={E => setDisplay(!contactIsVis && 'hidden', E)}
         className={`
-        messageCardNormal bg-contactbg
-        text-[1.5em] md:text-base-size
+        bg-contactbg dark:bg-contactbg-white
+        text-[1.3em] md:text-base-size
+        w-full h-dvh
         fixed right-0 bottom-0 z-1
         md:right-4 md:bottom-4
         md:w-100 md:h-auto
-        w-dvw h-dvh
+        
         ${contactIsVis ? 'animate-fadeup':'animate-fadedown'}
         contactTransit
-        md:rounded-lg p-8 md:p-4`}>
+        md:rounded-lg p-4`}>
             <Close cb={() => {
                 if(sending) return
                 ifContactIsVis(false)
